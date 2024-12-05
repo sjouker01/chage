@@ -1,7 +1,14 @@
 <?php
     namespace BeveiligingApp\Models\Connection;
-    use mysqli;
+
+use Exception;
+use mysqli;
+
     
+    /**
+     * class database
+     *  maakt verbinding met sql server
+     */
 
 
 class Database {
@@ -11,13 +18,9 @@ class Database {
     private $dbname = "LMS_Veiligheid";
     public $conn;
     /**
-     * 
-     * 
-     */    
-    /**
-     * Method __construct
-     *
-     * @return void
+     * constructor
+     * maakt new verbinding aan
+     * @throws Exception
      */
     public function __construct() {
         // Maak verbinding
