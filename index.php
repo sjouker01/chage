@@ -1,3 +1,12 @@
+<?php 
+require_once 'autoload.php';
+
+use BeveiligingApp\Controllers\HomeController;
+
+$homeController = new HomeController();
+$homeController->index();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,7 @@
     <title>Home</title>
 </head>
 <body class="index-body">
-    <?php require_once 'includes/header.php'; ?>
+    <?php include 'Templates/header.php'; ?>
     <main id="index_main">
         <section>
             <h1>Welkom</h1>
@@ -18,6 +27,6 @@
             <a id="enquête" href="enquêtes.php">Enquête</a>
         </section>
     </main>
-    <?php require_once 'includes/footer.php'; ?>
+    <?php include 'Templates/footer.php'; ?>
 </body>
 </html>
