@@ -4,8 +4,22 @@ namespace BeveiligingApp\Models\UserLogin;
 
 use BeveiligingApp\Models\Model;
 
+/**
+ * Class UserLogin
+ * 
+ * dit is is class voor login 
+ * 
+ * @package BeveiligingApp\Models\UserLogin
+ */
 class UserLogin extends Model
 {
+    /**
+     * Logs in a user with the provided username and password.
+     *
+     * @param string $username The username of the user.
+     * @param string $password The password of the user.
+     * @return void
+     */
     public function login($username, $password)
     {
         $stmt = $this->db->conn->prepare('SELECT voor_naam FROM gebruikers WHERE voor_naam =? AND Wachtwoord =?');

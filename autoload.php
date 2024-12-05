@@ -1,27 +1,18 @@
-<!-- dit is een auto loader  ik gebruik dit om require_once niet te hoeven gebruiken -->
-
 <?php
-
-
+// File: autoload.php
 spl_autoload_register(function ($class) {
-
     $prefix = 'BeveiligingApp\\';
-    
-    // base folder 
-    $base_dir = __DIR__ . '/';
-
-
+    $base_dir = __DIR__ . '/../src/'; // Adjusted to go one directory up
 
     $len = strlen($prefix);
-    if (strncmp($prefix, $class, $len) !== 0){
+    if (strncmp($prefix, $class, $len) !== 0) {
         return;
     }
-    
-    
+
     $relative_class = substr($class, $len);
     $file = $base_dir . str_replace('\\', '/', $relative_class) . '.php';
+
     if (file_exists($file)) {
         require $file;
     }
-
 });
