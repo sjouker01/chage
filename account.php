@@ -18,11 +18,6 @@
         <h1 class="title">Welkom op account page</h1>
         <p class="welcome-text">Hallo, <?php echo htmlspecialchars($_SESSION['voor_naam']); ?>!</p>
 
-        <?php
-        require_once './autoload.php';
-        use BeveiligingApp\Models\LoginController;
-        LoginController::showAccountPage();
-        ?>
 
         <form class="logout-form" action="includes/logout.php" method="post">
             <button class="btn btn-primary" type="submit">Loguit</button>

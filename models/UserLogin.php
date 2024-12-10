@@ -1,8 +1,8 @@
 <?php
 
-namespace BeveiligingApp\Models\UserLogin;
+namespace Models\UserLogin;
 
-use BeveiligingApp\Models\Model;
+use Models\Model;
 
 class UserLogin extends Model
 {

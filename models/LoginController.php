@@ -1,8 +1,8 @@
 <?php
 
-namespace BeveiligingApp\Models;
+namespace Models\Login;
 
-class LoginController {
+class LoginCheck {
     public static function checkLogin(){
         if (session_status() == PHP_SESSION_NONE) {
             session_start();

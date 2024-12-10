@@ -1,7 +1,8 @@
 <?php 
-namespace BeveiligingApp\Models;
+namespace Models;
 
-use BeveiligingApp\Models\Connection\Database;
+use Models\Connection\Database;
+
 
 class Model 
 {

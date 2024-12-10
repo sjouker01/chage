@@ -1,5 +1,5 @@
 <?php
-    namespace BeveiligingApp\Models\Connection;
+    namespace models\connection;
 
 use Exception;
 use mysqli;
