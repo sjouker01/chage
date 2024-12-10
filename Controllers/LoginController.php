@@ -2,14 +2,10 @@
 
 namespace App\Controllers;
 
-
-use Models\UserLogin\UserLogin;
-
-
+use Models\UserLogin\LoginUser;
 
 class LoginController
 {
-    
     /**
      * Summary of handleRequest
      * @return mixed
@@ -22,7 +18,7 @@ class LoginController
             $username = $_POST['email'];
             $password = $_POST['password'];
 
-            $userLogin = new UserLogin();
+            $userLogin = new LoginUser();
             $userLogin->login($username, $password);
         }
     }

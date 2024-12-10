@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -16,7 +18,7 @@
 
     <main id="account_main" class="account-main">
         <h1 class="title">Welkom op account page</h1>
-        <p class="welcome-text">Hallo, <?php echo htmlspecialchars($_SESSION['voor_naam']); ?>!</p>
+        
 
 
         <form class="logout-form" action="includes/logout.php" method="post">

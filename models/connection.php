@@ -1,22 +1,20 @@
 <?php
-    namespace models\connection;
+namespace models\connection;
 
 use Exception;
 use mysqli;
 
-    
-    /**
-     * class database
-     *  maakt verbinding met sql server
-     */
-
-
+/**
+ * class Database
+ * maakt verbinding met sql server
+ */
 class Database {
     private $servername = "localhost";
     private $username = "root";
     private $password = "Welkom01";
     private $dbname = "LMS_Veiligheid";
     public $conn;
+
     /**
      * constructor
      * maakt new verbinding aan

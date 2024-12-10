@@ -5,6 +5,7 @@ spl_autoload_register(function ($class) {
     $prefixes = [
         'BeveiligingApp\\' => __DIR__ . '/',
         'App\\Controllers\\' => __DIR__ . '/Controllers/'
+        
     ];
 
     // Loop through the prefixes array

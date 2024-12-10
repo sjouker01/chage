@@ -1,12 +1,10 @@
-<?php
-require_once './autoload.php';
+<?php    require_once './autoload.php';
 
-use App\Controllers\LoginController;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $controller = new LoginController();
-    $controller->handleRequest();
-}
+    use App\Controllers\LoginController;
+    $controll = new LoginController();
+    $controll->handleRequest();
+  
 ?>
 
 

@@ -1,8 +1,7 @@
 <?php 
 namespace Models;
 
-use Models\Connection\Database;
-
+use models\connection\Database;
 
 class Model 
 {
