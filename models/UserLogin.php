@@ -4,11 +4,11 @@ namespace Models\UserLogin;
 
 use Models\Model;
 
-class UserLogin extends Model
+class LoginUser extends Model
 {
     public function login($username, $password)
     {
-        $stmt = $this->db->conn->prepare('SELECT voor_naam FROM gebruikers WHERE voor_naam =? AND Wachtwoord =?');
+        $stmt = $this->db->conn->prepare('SELECT voor_naam, user_id FROM gebruikers WHERE voor_naam = ? AND wachtwoord = ?');
         if ($stmt){
             $stmt->bind_param('ss', $username, $password);
             $stmt->execute();
