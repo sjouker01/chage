@@ -1,5 +1,5 @@
 <?php
-namespace BeveiligingApp\Controllers;
+namespace Controllers;
 
 class HomeController
 {

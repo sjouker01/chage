@@ -1,11 +1,4 @@
-<?php 
-require_once 'autoload.php';
 
-use BeveiligingApp\Controllers\HomeController;
-
-$homeController = new HomeController();
-$homeController->index();
-?>
 
 <!DOCTYPE html>
 <html lang="en">

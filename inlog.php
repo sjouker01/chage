@@ -1,3 +1,16 @@
+<?php
+require_once './autoload.php';
+
+use App\Controllers\LoginController;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = new LoginController();
+    $controller->handleRequest();
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +22,7 @@
     <!-- <script src="./scripts/inlogg.js"></script> -->
     <!-- ik heb de script laten staan omdat ik het nog moet laten zien aan docent  -->
 </head>
-
-<body>
+<?php require_once './templates/header.php'?>
 
     <main id="inlog_main">
         <h2>Login</h2>
@@ -24,25 +36,11 @@
             <button class="button-login" type="submit">Login</button>
         </form>
         <div id="message">
-            <?php
-            require_once './autoload.php';
 
-            use BeveiligingApp\Models\UserLogin\UserLogin;
-
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                session_start();
-
-                $username = $_POST['email'];
-                $password = $_POST['password'];
-
-                $userLogin = new UserLogin();
-                $userLogin->login($username, $password);
-            }
-            ?>
         </div>
     </main>
 
-    <?php require_once 'includes/footer.php'; ?>
+    <?php require_once './templates/footer.php'; ?>
 
 </body>
 
