@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use Models\UserLogin\LoginUser;
 
+use Models\UserLogin\LoginUser;
 class LoginController
 {
     /**

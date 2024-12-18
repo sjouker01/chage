@@ -3,7 +3,7 @@ namespace Models;
 
 use Models\Connection\Database;
 
-class Model 
+class main 
 {
     protected $db;
 
