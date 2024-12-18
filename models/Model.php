@@ -1,9 +1,9 @@
 <?php 
 namespace Models;
 
-use models\connection\Database;
+use Models\Connection\Database;
 
-class Model 
+class main 
 {
     protected $db;
 

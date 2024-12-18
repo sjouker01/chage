@@ -2,15 +2,15 @@
 
 namespace Models\UserLogin;
 
-use Models\Model;
+use Models\main;
 
-class LoginUser extends Model
+class LoginUser extends main
 {
-    public function login($username, $password)
+    public function login($e_mail, $password)
     {
-        $stmt = $this->db->conn->prepare('SELECT voor_naam, user_id FROM gebruikers WHERE voor_naam = ? AND wachtwoord = ?');
+        $stmt = $this->db->conn->prepare('SELECT e_mail, voor_naam, user_id FROM gebruikers WHERE e_mail = ? AND wachtwoord = ?');
         if ($stmt){
-            $stmt->bind_param('ss', $username, $password);
+            $stmt->bind_param('ss', $e_mail, $password);
             $stmt->execute();
             $result = $stmt->get_result();
             $userdata = $result->fetch_assoc();
