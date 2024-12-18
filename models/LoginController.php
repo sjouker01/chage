@@ -1,26 +1,25 @@
 <?php
 
-namespace Models\Login;
+namespace Models\Controllers;
 
-class LoginCheck {
-    public static function checkLogin(){
-        if (session_status() == PHP_SESSION_NONE) {
+use Models\UserLogin\LoginUser;
+
+class LoginController
+{
+    /**
+     * Summary of handleRequest
+     * @return mixed
+     */
+    public function handleRequest()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             session_start();
-        }
-        return isset($_SESSION['id_user']);
-    }
 
-    public static function showAccountPage(){
-        if (self::checkLogin()) {
-            $userid = $_SESSION['id_user'];
-            if ($userid == 1) {
-                include 'template_admin.php';
-            } else {
-                include 'template_user.php';
-            }
-        } else {
-            header('Location: index.php');
-            exit();
+            $username = $_POST['email'];
+            $password = $_POST['password'];
+
+            $userLogin = new LoginUser();
+            $userLogin->login($username, $password);
         }
     }
 }
